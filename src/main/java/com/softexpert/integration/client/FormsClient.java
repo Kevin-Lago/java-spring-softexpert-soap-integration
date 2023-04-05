@@ -15,64 +15,64 @@ import static com.softexpert.integration.util.PrettyLogger.logObject;
 public class FormsClient extends WebServiceGatewaySupport {
     private static final Logger log = LoggerFactory.getLogger(FormsClientConfig.class.getName());
 
-    public JAXBElement<NewTableRecordResponseType> newTableRecord(NewTableRecordRequestType newTableRecordRequestType) {
+    public NewTableRecordResponseType newTableRecord(NewTableRecordRequestType newTableRecordRequestType) {
         JAXBElement<NewTableRecordResponseType> response = (JAXBElement<NewTableRecordResponseType>) createSoapRequest(
                 newTableRecordRequestType,
                 "urn:form#newTableRecord"
         );
 
         logObject(log, "Created table record(s)", response);
-        return response;
+        return response.getValue();
     }
 
-    public JAXBElement<GetTableRecordResponseType> getTableRecords(GetTableRecordRequestType getTableRecordRequestType) {
+    public GetTableRecordResponseType getTableRecords(GetTableRecordRequestType getTableRecordRequestType) {
         JAXBElement<GetTableRecordResponseType> response = (JAXBElement<GetTableRecordResponseType>) createSoapRequest(
                 getTableRecordRequestType,
                 "urn:form#getTableRecord"
         );
 
         logObject(log, "Fetched table record(s)", response);
-        return response;
+        return response.getValue();
     }
 
-    public JAXBElement<EditTableRecordResponseType> editTableRecord(EditTableRecordRequestType editTableRecordRequestType) {
+    public EditTableRecordResponseType editTableRecord(EditTableRecordRequestType editTableRecordRequestType) {
         JAXBElement<EditTableRecordResponseType> response = (JAXBElement<EditTableRecordResponseType>) createSoapRequest(
                 editTableRecordRequestType,
                 "urn:form#editTableRecord"
         );
 
         logObject(log, "Modified table record(s)", response);
-        return response;
+        return response.getValue();
     }
 
-    public JAXBElement<DeleteTableRecordResponseType> deleteTableRecord(DeleteTableRecordRequestType deleteTableRecordRequestType) {
+    public DeleteTableRecordResponseType deleteTableRecord(DeleteTableRecordRequestType deleteTableRecordRequestType) {
         JAXBElement<DeleteTableRecordResponseType> response = (JAXBElement<DeleteTableRecordResponseType>) createSoapRequest(
                 deleteTableRecordRequestType,
                 "urn:form#deleteTableRecord"
         );
 
         logObject(log, "Deleted table record(s)", response);
-        return response;
+        return response.getValue();
     }
 
-    public JAXBElement<NewTableRecordListResponseType> newTableRecordList(NewTableRecordListRequestType newTableRecordListRequestType) {
+    public NewTableRecordListResponseType newTableRecordList(NewTableRecordListRequestType newTableRecordListRequestType) {
         JAXBElement<NewTableRecordListResponseType> response = (JAXBElement<NewTableRecordListResponseType>) createSoapRequest(
                 newTableRecordListRequestType,
                 "urn:form#newTableRecordList"
         );
 
         logObject(log, "Created table record list(s)", response);
-        return response;
+        return response.getValue();
     }
 
-    public JAXBElement<DeleteTableRecordListResponseType> deleteTableRecordList(DeleteTableRecordListRequestType deleteTableRecordListRequestType) {
+    public DeleteTableRecordListResponseType deleteTableRecordList(DeleteTableRecordListRequestType deleteTableRecordListRequestType) {
         JAXBElement<DeleteTableRecordListResponseType> response = (JAXBElement<DeleteTableRecordListResponseType>) createSoapRequest(
                 deleteTableRecordListRequestType,
                 "urn:form#deleteTableRecordList"
         );
 
         logObject(log, "Deleted table record list(s)", response);
-        return response;
+        return response.getValue();
     }
 
     private Object createSoapRequest(Object schema, String soapAction) {
