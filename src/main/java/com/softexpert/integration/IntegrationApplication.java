@@ -10,4 +10,17 @@ public class IntegrationApplication {
 		SpringApplication.run(IntegrationApplication.class, args);
 	}
 
+//	@Bean
+//	CommandLineRunner lookup(TableRecordClient tableRecordClient) {
+//		return args -> {
+////			String country = "Spain";
+////
+////			if (args.length > 0) {
+////				country = args[0];
+////			}
+////			tableRecordClient.getTableRecords();
+////			System.err.println(response.getCountry().getCurrency());
+//		};
+//	}
+
 }
