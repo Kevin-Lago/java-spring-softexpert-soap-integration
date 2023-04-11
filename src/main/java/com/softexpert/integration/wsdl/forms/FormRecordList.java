@@ -73,4 +73,10 @@ public class FormRecordList {
         return this.record;
     }
 
+    public void addRecord(TbRecord record) {
+        if (this.record == null) {
+            this.record = new ArrayList<TbRecord>();
+        }
+        this.record.add(record);
+    }
 }
